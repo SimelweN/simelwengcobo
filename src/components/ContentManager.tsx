@@ -286,17 +286,19 @@ const ContentManager = () => {
                             </div>
                           </div>
                         </DialogTrigger>
-                        <DialogContent className="max-w-4xl max-h-[90vh] p-0 bg-black/90">
+                        <DialogContent className="max-w-[95vw] max-h-[95vh] w-auto h-auto p-4 bg-black/90 overflow-hidden">
                           <VisuallyHidden.Root asChild>
                             <DialogTitle>
                               {item.title} - Full Size View
                             </DialogTitle>
                           </VisuallyHidden.Root>
-                          <img
-                            src={item.file_path}
-                            alt={item.title}
-                            className="w-full h-auto object-contain"
-                          />
+                          <div className="flex items-center justify-center max-h-[85vh] overflow-hidden">
+                            <img
+                              src={item.file_path}
+                              alt={item.title}
+                              className="max-w-full max-h-full object-contain"
+                            />
+                          </div>
                         </DialogContent>
                       </Dialog>
                     </>
