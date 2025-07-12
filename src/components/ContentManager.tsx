@@ -287,6 +287,11 @@ const ContentManager = () => {
                           </div>
                         </DialogTrigger>
                         <DialogContent className="max-w-4xl max-h-[90vh] p-0 bg-black/90">
+                          <VisuallyHidden.Root asChild>
+                            <DialogTitle>
+                              {item.title} - Full Size View
+                            </DialogTitle>
+                          </VisuallyHidden.Root>
                           <img
                             src={item.file_path}
                             alt={item.title}
