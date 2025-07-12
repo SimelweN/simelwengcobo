@@ -153,10 +153,6 @@ const Services = () => {
                       </div>
                     ))}
                   </div>
-
-                  <Button variant="glow" size="sm" className="w-full">
-                    Get Started
-                  </Button>
                 </CardContent>
               </Card>
             ))}
