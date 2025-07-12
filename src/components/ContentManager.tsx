@@ -305,11 +305,37 @@ const ContentManager = () => {
                   ) : isVideoFile(item.file_path) ? (
                     <>
                       <Video className="absolute top-4 left-4 h-6 w-6 text-white/80 z-10" />
-                      <video
-                        src={item.file_path}
-                        className="w-full h-auto object-contain max-h-96"
-                        controls
-                      />
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <div className="relative cursor-pointer group/expand">
+                            <video
+                              src={item.file_path}
+                              className="w-full h-auto object-contain max-h-96 pointer-events-none"
+                              muted
+                              loop
+                              preload="metadata"
+                            />
+                            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover/expand:opacity-100 transition-opacity flex items-center justify-center">
+                              <Expand className="h-8 w-8 text-white" />
+                            </div>
+                          </div>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-[95vw] max-h-[95vh] w-auto h-auto p-4 bg-black/90 overflow-hidden">
+                          <VisuallyHidden.Root asChild>
+                            <DialogTitle>
+                              {item.title} - Full Size View
+                            </DialogTitle>
+                          </VisuallyHidden.Root>
+                          <div className="flex items-center justify-center max-h-[85vh] overflow-hidden">
+                            <video
+                              src={item.file_path}
+                              className="max-w-full max-h-full object-contain"
+                              controls
+                              autoPlay
+                            />
+                          </div>
+                        </DialogContent>
+                      </Dialog>
                     </>
                   ) : (
                     <div className="flex items-center justify-center h-full">
