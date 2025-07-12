@@ -111,16 +111,16 @@ const Header = () => {
                 journey
               </button>
               <button
+                onClick={() => scrollToSection("services")}
+                className="text-left text-muted-foreground hover:text-primary transition-colors"
+              >
+                services
+              </button>
+              <button
                 onClick={() => scrollToSection("projects")}
                 className="text-left text-muted-foreground hover:text-primary transition-colors"
               >
                 projects
-              </button>
-              <button
-                onClick={() => scrollToSection("content-manager")}
-                className="text-left text-muted-foreground hover:text-primary transition-colors"
-              >
-                content
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
