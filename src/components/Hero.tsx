@@ -4,7 +4,7 @@ import { ArrowDown, Github, Linkedin, Mail, Code, Coffee } from 'lucide-react';
 
 const Hero = () => {
   const [typedText, setTypedText] = useState('');
-  const fullText = 'Full Stack Developer';
+  const fullText = 'Digital Creator & Entrepreneur';
   
   useEffect(() => {
     let currentIndex = 0;
@@ -50,26 +50,25 @@ const Hero = () => {
               </div>
               <div className="space-y-2">
                 <div className="text-primary">$ whoami</div>
-                <div className="text-foreground">Alex Chen</div>
+                <div className="text-foreground">Simelwe Ngcobo</div>
                 <div className="text-primary">$ cat role.txt</div>
                 <div className="text-foreground">
                   {typedText}<span className="animate-pulse">|</span>
                 </div>
                 <div className="text-primary">$ ls skills/</div>
                 <div className="text-muted-foreground">
-                  react.js typescript node.js python aws...
+                  react.js supabase canva capcut figma...
                 </div>
               </div>
             </div>
           </div>
 
           <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-accent bg-clip-text text-transparent animate-slide-up">
-            Alex Chen
+            Simelwe Ngcobo
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in">
-            I craft digital experiences that blend creativity with cutting-edge technology. 
-            Currently obsessed with React, TypeScript, and making the web more beautiful.
+            📍 South Africa | 19-year-old entrepreneur building digital solutions that help local youth businesses look clean, professional, and digital-ready.
           </p>
 
           {/* Action Buttons */}
@@ -120,7 +119,7 @@ const Hero = () => {
               </div>
             </a>
             <a 
-              href="mailto:alex@example.com"
+              href="mailto:simelwe@rebookedsolutions.co.za"
               className="group relative p-4 rounded-2xl bg-card hover:bg-accent transition-all duration-300 hover:scale-110 shadow-card hover:shadow-glow animate-float"
               style={{ animationDelay: '2s' }}
             >

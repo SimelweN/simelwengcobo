@@ -21,34 +21,34 @@ const About = () => {
                 Building the future, one line at a time
               </h3>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                I'm a passionate full-stack developer with 6+ years of experience crafting 
-                digital solutions that blend cutting-edge technology with intuitive design. 
-                My journey began with curiosity about how things work and evolved into a 
-                love for building them.
+                I'm Simelwe Ngcobo, a 19-year-old entrepreneur and digital creative from South Africa. 
+                I'm the Founder & CEO of ReBooked Solutions, an innovative student platform, and I run 
+                a growing freelance side hustle focused on helping local youth businesses look clean, 
+                professional, and digital-ready.
               </p>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                I specialize in React, TypeScript, and Node.js, but I'm always exploring 
-                new technologies. When I'm not coding, you'll find me contributing to open 
-                source projects, mentoring junior developers, or experimenting with AI and 
-                machine learning.
+                Although I'm no longer enrolled at Richfield Graduate Institute, I studied BSc Information 
+                Technology, where I built a strong foundation in web development, networks, cloud tech, 
+                and system design. Since then, I've applied those skills in real-world projects, building 
+                platforms, running campaigns, and producing ad content that actually works.
               </p>
               
               <div className="grid grid-cols-2 gap-4 pt-6">
                 <div className="text-center p-4 bg-card/50 rounded-2xl border border-border">
-                  <div className="text-2xl font-bold text-primary">50+</div>
-                  <div className="text-sm text-muted-foreground">Projects Completed</div>
+                  <div className="text-2xl font-bold text-primary">1</div>
+                  <div className="text-sm text-muted-foreground">Company Founded</div>
                 </div>
                 <div className="text-center p-4 bg-card/50 rounded-2xl border border-border">
-                  <div className="text-2xl font-bold text-primary">6+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
-                </div>
-                <div className="text-center p-4 bg-card/50 rounded-2xl border border-border">
-                  <div className="text-2xl font-bold text-primary">20+</div>
-                  <div className="text-sm text-muted-foreground">Happy Clients</div>
+                  <div className="text-2xl font-bold text-primary">19</div>
+                  <div className="text-sm text-muted-foreground">Years Old</div>
                 </div>
                 <div className="text-center p-4 bg-card/50 rounded-2xl border border-border">
                   <div className="text-2xl font-bold text-primary">∞</div>
-                  <div className="text-sm text-muted-foreground">Coffee Cups</div>
+                  <div className="text-sm text-muted-foreground">Creative Projects</div>
+                </div>
+                <div className="text-center p-4 bg-card/50 rounded-2xl border border-border">
+                  <div className="text-2xl font-bold text-primary">🇿🇦</div>
+                  <div className="text-sm text-muted-foreground">South Africa</div>
                 </div>
               </div>
             </div>
@@ -62,10 +62,10 @@ const About = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-foreground mb-2 text-lg">
-                        Problem Solver
+                        ReBooked Solutions
                       </h4>
                       <p className="text-muted-foreground">
-                        I love breaking down complex problems into elegant, scalable solutions.
+                        Founder & CEO of a platform helping South African students buy and sell secondhand textbooks.
                       </p>
                     </div>
                   </div>
@@ -80,10 +80,10 @@ const About = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-foreground mb-2 text-lg">
-                        Creative Thinker
+                        Creative Services
                       </h4>
                       <p className="text-muted-foreground">
-                        Bringing fresh perspectives and innovative approaches to every project.
+                        Video ads, flyers, digital designs & websites for young businesses that want to look modern.
                       </p>
                     </div>
                   </div>
@@ -98,10 +98,10 @@ const About = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-foreground mb-2 text-lg">
-                        Fast Learner
+                        Gen Z Marketing
                       </h4>
                       <p className="text-muted-foreground">
-                        Constantly evolving with the latest technologies and best practices.
+                        Strong Gen Z marketing sense with fast turnaround and affordable pricing.
                       </p>
                     </div>
                   </div>
@@ -116,10 +116,10 @@ const About = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-foreground mb-2 text-lg">
-                        Team Player
+                        Self-Taught & Adaptable
                       </h4>
                       <p className="text-muted-foreground">
-                        Collaborating effectively with designers, developers, and stakeholders.
+                        Self-taught, adaptable, and passionate about creating solutions that make a real difference.
                       </p>
                     </div>
                   </div>

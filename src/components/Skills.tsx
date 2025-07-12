@@ -3,33 +3,33 @@ import { Card, CardContent } from '@/components/ui/card';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "frontend",
+      title: "development",
       skills: [
         { name: "React", level: 95, color: "from-blue-400 to-blue-600" },
-        { name: "TypeScript", level: 90, color: "from-blue-500 to-indigo-600" },
-        { name: "Next.js", level: 88, color: "from-gray-600 to-gray-800" },
-        { name: "Tailwind", level: 92, color: "from-cyan-400 to-cyan-600" },
-        { name: "Vue.js", level: 82, color: "from-green-400 to-green-600" },
+        { name: "JavaScript", level: 88, color: "from-yellow-400 to-orange-600" },
+        { name: "HTML/CSS", level: 90, color: "from-orange-500 to-red-600" },
+        { name: "Supabase", level: 90, color: "from-green-400 to-green-600" },
+        { name: "Firebase", level: 82, color: "from-orange-400 to-yellow-600" },
       ]
     },
     {
-      title: "backend",
+      title: "design",
       skills: [
-        { name: "Node.js", level: 85, color: "from-green-500 to-green-700" },
-        { name: "Python", level: 80, color: "from-yellow-400 to-yellow-600" },
-        { name: "PostgreSQL", level: 82, color: "from-blue-600 to-blue-800" },
-        { name: "MongoDB", level: 78, color: "from-green-600 to-green-800" },
-        { name: "GraphQL", level: 75, color: "from-pink-500 to-purple-600" },
+        { name: "Canva", level: 95, color: "from-purple-500 to-pink-600" },
+        { name: "Figma", level: 85, color: "from-blue-500 to-purple-600" },
+        { name: "CapCut", level: 90, color: "from-green-500 to-blue-600" },
+        { name: "VN Editor", level: 88, color: "from-pink-500 to-red-600" },
+        { name: "Brand Design", level: 85, color: "from-indigo-500 to-purple-600" },
       ]
     },
     {
-      title: "tools",
+      title: "business",
       skills: [
-        { name: "Git", level: 90, color: "from-orange-500 to-red-600" },
-        { name: "Docker", level: 75, color: "from-blue-500 to-blue-700" },
-        { name: "AWS", level: 70, color: "from-orange-400 to-orange-600" },
-        { name: "Figma", level: 85, color: "from-purple-500 to-pink-600" },
-        { name: "Webpack", level: 80, color: "from-blue-400 to-blue-600" },
+        { name: "MVP Building", level: 90, color: "from-green-500 to-teal-600" },
+        { name: "Marketing", level: 92, color: "from-pink-500 to-rose-600" },
+        { name: "Entrepreneurship", level: 88, color: "from-yellow-500 to-orange-600" },
+        { name: "Paystack", level: 85, color: "from-blue-500 to-cyan-600" },
+        { name: "Customer Support", level: 90, color: "from-purple-500 to-indigo-600" },
       ]
     }
   ];
@@ -97,12 +97,12 @@ const Skills = () => {
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
               {[
-                { name: 'AI/ML', color: 'from-purple-500 to-pink-600' },
-                { name: 'Web3', color: 'from-blue-500 to-cyan-600' },
-                { name: 'Rust', color: 'from-orange-500 to-red-600' },
-                { name: 'Go', color: 'from-cyan-500 to-blue-600' },
-                { name: 'WebAssembly', color: 'from-green-500 to-teal-600' },
-                { name: 'Three.js', color: 'from-yellow-500 to-orange-600' },
+                { name: 'Mobile Apps', color: 'from-purple-500 to-pink-600' },
+                { name: 'AI Content', color: 'from-blue-500 to-cyan-600' },
+                { name: 'E-commerce', color: 'from-orange-500 to-red-600' },
+                { name: 'SaaS Platforms', color: 'from-cyan-500 to-blue-600' },
+                { name: 'EdTech', color: 'from-green-500 to-teal-600' },
+                { name: 'Video Production', color: 'from-yellow-500 to-orange-600' },
               ].map((tech) => (
                 <div 
                   key={tech.name}

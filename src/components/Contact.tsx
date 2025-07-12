@@ -37,10 +37,10 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-              let's build something
+              let's work together
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Got an idea? Let's turn it into reality. I'm always excited to work on interesting projects.
+              Available for freelance projects! Video ads, flyers, websites - let's make your business look clean, professional, and digital-ready.
             </p>
           </div>
 
@@ -61,7 +61,7 @@ const Contact = () => {
                         </div>
                         <div>
                           <h4 className="font-bold text-foreground">email</h4>
-                          <p className="text-muted-foreground font-mono text-sm">alex@chen.dev</p>
+                          <p className="text-muted-foreground font-mono text-sm">simelwe@rebookedsolutions.co.za</p>
                         </div>
                       </div>
                     </CardContent>
@@ -74,8 +74,8 @@ const Contact = () => {
                           <Phone className="h-6 w-6 text-primary" />
                         </div>
                         <div>
-                          <h4 className="font-bold text-foreground">phone</h4>
-                          <p className="text-muted-foreground font-mono text-sm">+1 (555) 123-4567</p>
+                          <h4 className="font-bold text-foreground">whatsapp</h4>
+                          <p className="text-muted-foreground font-mono text-sm">Available on request</p>
                         </div>
                       </div>
                     </CardContent>
@@ -89,7 +89,7 @@ const Contact = () => {
                         </div>
                         <div>
                           <h4 className="font-bold text-foreground">location</h4>
-                          <p className="text-muted-foreground">san francisco, ca</p>
+                          <p className="text-muted-foreground">south africa</p>
                         </div>
                       </div>
                     </CardContent>
@@ -109,13 +109,13 @@ const Contact = () => {
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">
-                      remote
+                      video ads
                     </span>
                     <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">
-                      freelance
+                      flyers
                     </span>
                     <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">
-                      full-time
+                      websites
                     </span>
                   </div>
                 </CardContent>
