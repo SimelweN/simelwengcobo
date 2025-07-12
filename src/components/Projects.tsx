@@ -60,21 +60,11 @@ const Projects = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-              featured work
+              project showcase
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              A collection of projects that showcase my passion for creating exceptional digital experiences.
+              Sample projects demonstrating various skills and technologies I work with.
             </p>
-            <div className="mt-6">
-              <a 
-                href="https://rebookedsolutions.co.za" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium"
-              >
-                Visit ReBooked Solutions →
-              </a>
-            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

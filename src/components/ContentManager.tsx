@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Upload, X, Plus, Trash2, Image, Video } from 'lucide-react';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Upload, X, Plus, Trash2, Image, Video, Expand } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 
@@ -251,16 +252,32 @@ const ContentManager = () => {
                 <div className="relative bg-muted/50 rounded-2xl overflow-hidden" style={{ aspectRatio: 'auto' }}>
                   {isImageFile(item.file_path) ? (
                     <>
-                      <Image className="absolute top-4 left-4 h-6 w-6 text-white/80" />
-                      <img 
-                        src={item.file_path} 
-                        alt={item.title}
-                        className="w-full h-auto object-contain max-h-96"
-                      />
+                      <Image className="absolute top-4 left-4 h-6 w-6 text-white/80 z-10" />
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <div className="relative cursor-pointer group/expand">
+                            <img 
+                              src={item.file_path} 
+                              alt={item.title}
+                              className="w-full h-auto object-contain max-h-96"
+                            />
+                            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover/expand:opacity-100 transition-opacity flex items-center justify-center">
+                              <Expand className="h-8 w-8 text-white" />
+                            </div>
+                          </div>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-4xl max-h-[90vh] p-0 bg-black/90">
+                          <img 
+                            src={item.file_path} 
+                            alt={item.title}
+                            className="w-full h-auto object-contain"
+                          />
+                        </DialogContent>
+                      </Dialog>
                     </>
                   ) : isVideoFile(item.file_path) ? (
                     <>
-                      <Video className="absolute top-4 left-4 h-6 w-6 text-white/80" />
+                      <Video className="absolute top-4 left-4 h-6 w-6 text-white/80 z-10" />
                       <video 
                         src={item.file_path}
                         className="w-full h-auto object-contain max-h-96"
@@ -277,7 +294,7 @@ const ContentManager = () => {
                     variant="ghost"
                     size="sm"
                     onClick={() => deleteMediaItem(item.id, item.file_path)}
-                    className="absolute top-4 right-4 bg-black/50 hover:bg-red-500/80 text-white opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="absolute top-4 right-4 bg-black/50 hover:bg-red-500/80 text-white opacity-0 group-hover:opacity-100 transition-opacity z-10"
                   >
                     <Trash2 className="h-4 w-4" />
                   </Button>

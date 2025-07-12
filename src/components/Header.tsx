@@ -43,10 +43,10 @@ const Header = () => {
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
             </button>
             <button 
-              onClick={() => scrollToSection('skills')}
+              onClick={() => scrollToSection('experience')}
               className="text-muted-foreground hover:text-primary transition-colors relative group"
             >
-              <span>skills</span>
+              <span>journey</span>
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
             </button>
             <button 
@@ -101,10 +101,10 @@ const Header = () => {
                 about
               </button>
               <button 
-                onClick={() => scrollToSection('skills')}
+                onClick={() => scrollToSection('experience')}
                 className="text-left text-muted-foreground hover:text-primary transition-colors"
               >
-                skills
+                journey
               </button>
               <button 
                 onClick={() => scrollToSection('projects')}
