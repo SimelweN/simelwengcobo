@@ -3,7 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, MessageSquare, Calendar } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -17,10 +17,9 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
     toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
+      title: "message sent! 🚀",
+      description: "thanks for reaching out. i'll get back to you within 24 hours.",
     });
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
@@ -33,97 +32,121 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-24">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              Let's Work Together
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
+              let's build something
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Ready to start your next project? Let's discuss how I can help bring your ideas to life.
+              Got an idea? Let's turn it into reality. I'm always excited to work on interesting projects.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="grid lg:grid-cols-5 gap-12">
             {/* Contact Information */}
-            <div className="lg:col-span-1">
-              <h3 className="text-2xl font-semibold mb-8 text-foreground">
-                Get In Touch
-              </h3>
-              
-              <div className="space-y-6">
-                <Card className="p-6 bg-gradient-card border-0 shadow-card hover:shadow-elegant transition-all duration-300">
-                  <CardContent className="p-0">
-                    <div className="flex items-center space-x-4">
-                      <div className="p-3 bg-primary/10 rounded-lg">
-                        <Mail className="h-6 w-6 text-primary" />
+            <div className="lg:col-span-2 space-y-8">
+              <div>
+                <h3 className="text-2xl font-bold mb-8 text-foreground">
+                  get in touch
+                </h3>
+                
+                <div className="space-y-6">
+                  <Card className="group p-6 bg-gradient-card border-0 shadow-card hover:shadow-glow transition-all duration-300 rounded-3xl">
+                    <CardContent className="p-0">
+                      <div className="flex items-center space-x-4">
+                        <div className="p-3 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-colors">
+                          <Mail className="h-6 w-6 text-primary" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-foreground">email</h4>
+                          <p className="text-muted-foreground font-mono text-sm">alex@chen.dev</p>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-foreground">Email</h4>
-                        <p className="text-muted-foreground">john@example.com</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
 
-                <Card className="p-6 bg-gradient-card border-0 shadow-card hover:shadow-elegant transition-all duration-300">
-                  <CardContent className="p-0">
-                    <div className="flex items-center space-x-4">
-                      <div className="p-3 bg-primary/10 rounded-lg">
-                        <Phone className="h-6 w-6 text-primary" />
+                  <Card className="group p-6 bg-gradient-card border-0 shadow-card hover:shadow-glow transition-all duration-300 rounded-3xl">
+                    <CardContent className="p-0">
+                      <div className="flex items-center space-x-4">
+                        <div className="p-3 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-colors">
+                          <Phone className="h-6 w-6 text-primary" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-foreground">phone</h4>
+                          <p className="text-muted-foreground font-mono text-sm">+1 (555) 123-4567</p>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-foreground">Phone</h4>
-                        <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
 
-                <Card className="p-6 bg-gradient-card border-0 shadow-card hover:shadow-elegant transition-all duration-300">
-                  <CardContent className="p-0">
-                    <div className="flex items-center space-x-4">
-                      <div className="p-3 bg-primary/10 rounded-lg">
-                        <MapPin className="h-6 w-6 text-primary" />
+                  <Card className="group p-6 bg-gradient-card border-0 shadow-card hover:shadow-glow transition-all duration-300 rounded-3xl">
+                    <CardContent className="p-0">
+                      <div className="flex items-center space-x-4">
+                        <div className="p-3 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-colors">
+                          <MapPin className="h-6 w-6 text-primary" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-foreground">location</h4>
+                          <p className="text-muted-foreground">san francisco, ca</p>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-foreground">Location</h4>
-                        <p className="text-muted-foreground">San Francisco, CA</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
 
-              <div className="mt-8">
-                <p className="text-muted-foreground mb-4">
-                  Available for freelance work and full-time opportunities.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">
-                    Freelance Available
-                  </span>
-                  <span className="px-3 py-1 bg-accent text-accent-foreground text-sm rounded-full">
-                    Remote Friendly
-                  </span>
-                </div>
+              {/* Availability Status */}
+              <Card className="p-6 bg-gradient-card border-0 shadow-card rounded-3xl">
+                <CardContent className="p-0">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                    <span className="text-foreground font-medium">available for work</span>
+                  </div>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    currently accepting new projects and collaborations
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">
+                      remote
+                    </span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">
+                      freelance
+                    </span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">
+                      full-time
+                    </span>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Quick Actions */}
+              <div className="space-y-3">
+                <Button variant="minimal" className="w-full justify-start" size="lg">
+                  <MessageSquare className="h-5 w-5 mr-3" />
+                  schedule a call
+                </Button>
+                <Button variant="minimal" className="w-full justify-start" size="lg">
+                  <Calendar className="h-5 w-5 mr-3" />
+                  book consultation
+                </Button>
               </div>
             </div>
 
             {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <Card className="p-8 bg-gradient-card border-0 shadow-card">
+            <div className="lg:col-span-3">
+              <Card className="p-8 bg-gradient-card border-0 shadow-card rounded-3xl">
                 <CardContent className="p-0">
-                  <h3 className="text-2xl font-semibold mb-6 text-foreground">
-                    Send Me a Message
+                  <h3 className="text-2xl font-bold mb-8 text-foreground">
+                    send me a message
                   </h3>
                   
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label className="block text-sm font-medium text-foreground mb-2">
-                          Name *
+                        <label className="block text-sm font-medium text-foreground mb-3">
+                          name *
                         </label>
                         <Input
                           type="text"
@@ -131,13 +154,13 @@ const Contact = () => {
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          className="w-full"
-                          placeholder="Your name"
+                          className="w-full bg-secondary/50 border-border rounded-2xl h-12"
+                          placeholder="your name"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-foreground mb-2">
-                          Email *
+                        <label className="block text-sm font-medium text-foreground mb-3">
+                          email *
                         </label>
                         <Input
                           type="email"
@@ -145,29 +168,29 @@ const Contact = () => {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          className="w-full"
+                          className="w-full bg-secondary/50 border-border rounded-2xl h-12"
                           placeholder="your@email.com"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Subject
+                      <label className="block text-sm font-medium text-foreground mb-3">
+                        subject
                       </label>
                       <Input
                         type="text"
                         name="subject"
                         value={formData.subject}
                         onChange={handleChange}
-                        className="w-full"
-                        placeholder="Project inquiry, collaboration, etc."
+                        className="w-full bg-secondary/50 border-border rounded-2xl h-12"
+                        placeholder="what's this about?"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Message *
+                      <label className="block text-sm font-medium text-foreground mb-3">
+                        message *
                       </label>
                       <Textarea
                         name="message"
@@ -175,19 +198,19 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         rows={6}
-                        className="w-full resize-none"
-                        placeholder="Tell me about your project, ideas, or just say hello..."
+                        className="w-full resize-none bg-secondary/50 border-border rounded-2xl"
+                        placeholder="tell me about your project, ideas, or just say hello..."
                       />
                     </div>
 
                     <Button 
                       type="submit" 
-                      variant="hero" 
+                      variant="glow" 
                       size="lg"
                       className="w-full md:w-auto"
                     >
                       <Send className="h-5 w-5 mr-2" />
-                      Send Message
+                      send message
                     </Button>
                   </form>
                 </CardContent>

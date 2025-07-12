@@ -1,8 +1,25 @@
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
-import heroImage from '@/assets/hero-bg.jpg';
+import { ArrowDown, Github, Linkedin, Mail, Code, Coffee } from 'lucide-react';
 
 const Hero = () => {
+  const [typedText, setTypedText] = useState('');
+  const fullText = 'Full Stack Developer';
+  
+  useEffect(() => {
+    let currentIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (currentIndex <= fullText.length) {
+        setTypedText(fullText.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, 100);
+    
+    return () => clearInterval(typingInterval);
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -12,71 +29,105 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background/80 to-background/90" />
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-hero">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0iaHNsKDE0MiA3NiUgMzYlIC8gMC4xKSIvPgo8L3N2Zz4K')] opacity-20" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-            John Doe
+          {/* Terminal-style intro */}
+          <div className="mb-8 text-left max-w-2xl mx-auto">
+            <div className="bg-card rounded-2xl p-6 border border-border shadow-elegant font-mono text-sm">
+              <div className="flex items-center mb-4">
+                <div className="flex space-x-2">
+                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                </div>
+                <span className="ml-4 text-muted-foreground">~/portfolio</span>
+              </div>
+              <div className="space-y-2">
+                <div className="text-primary">$ whoami</div>
+                <div className="text-foreground">Alex Chen</div>
+                <div className="text-primary">$ cat role.txt</div>
+                <div className="text-foreground">
+                  {typedText}<span className="animate-pulse">|</span>
+                </div>
+                <div className="text-primary">$ ls skills/</div>
+                <div className="text-muted-foreground">
+                  react.js typescript node.js python aws...
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-accent bg-clip-text text-transparent animate-slide-up">
+            Alex Chen
           </h1>
-          <h2 className="text-2xl md:text-3xl text-muted-foreground mb-8 font-light">
-            Full Stack Developer & UI/UX Enthusiast
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            Crafting digital experiences with modern technologies. 
-            Passionate about creating beautiful, functional, and user-centered solutions.
+          
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in">
+            I craft digital experiences that blend creativity with cutting-edge technology. 
+            Currently obsessed with React, TypeScript, and making the web more beautiful.
           </p>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-slide-up">
             <Button 
-              variant="hero" 
+              variant="glow" 
               size="lg"
               onClick={() => scrollToSection('projects')}
               className="text-lg px-8 py-6"
             >
-              View My Work
+              <Code className="mr-2 h-5 w-5" />
+              view work
             </Button>
             <Button 
-              variant="professional" 
+              variant="minimal" 
               size="lg"
               onClick={() => scrollToSection('contact')}
               className="text-lg px-8 py-6"
             >
-              Let's Connect
+              <Coffee className="mr-2 h-5 w-5" />
+              grab coffee
             </Button>
           </div>
 
-          {/* Social Links */}
+          {/* Social Links - Floating */}
           <div className="flex justify-center space-x-6 mb-16">
             <a 
               href="https://github.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-card hover:bg-accent transition-all duration-300 hover:scale-110 shadow-card hover:shadow-elegant"
+              className="group relative p-4 rounded-2xl bg-card hover:bg-accent transition-all duration-300 hover:scale-110 shadow-card hover:shadow-glow animate-float"
             >
-              <Github className="h-6 w-6 text-foreground" />
+              <Github className="h-6 w-6 text-foreground group-hover:text-primary transition-colors" />
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                GitHub
+              </div>
             </a>
             <a 
               href="https://linkedin.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-card hover:bg-accent transition-all duration-300 hover:scale-110 shadow-card hover:shadow-elegant"
+              className="group relative p-4 rounded-2xl bg-card hover:bg-accent transition-all duration-300 hover:scale-110 shadow-card hover:shadow-glow animate-float"
+              style={{ animationDelay: '1s' }}
             >
-              <Linkedin className="h-6 w-6 text-foreground" />
+              <Linkedin className="h-6 w-6 text-foreground group-hover:text-primary transition-colors" />
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                LinkedIn
+              </div>
             </a>
             <a 
-              href="mailto:john@example.com"
-              className="p-3 rounded-full bg-card hover:bg-accent transition-all duration-300 hover:scale-110 shadow-card hover:shadow-elegant"
+              href="mailto:alex@example.com"
+              className="group relative p-4 rounded-2xl bg-card hover:bg-accent transition-all duration-300 hover:scale-110 shadow-card hover:shadow-glow animate-float"
+              style={{ animationDelay: '2s' }}
             >
-              <Mail className="h-6 w-6 text-foreground" />
+              <Mail className="h-6 w-6 text-foreground group-hover:text-primary transition-colors" />
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                Email
+              </div>
             </a>
           </div>
 
@@ -84,7 +135,7 @@ const Hero = () => {
           <div className="animate-bounce">
             <button 
               onClick={() => scrollToSection('about')}
-              className="p-2 rounded-full hover:bg-accent transition-colors"
+              className="p-3 rounded-full hover:bg-accent transition-all duration-300"
             >
               <ArrowDown className="h-6 w-6 text-muted-foreground" />
             </button>
@@ -92,9 +143,10 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-primary-glow/10 rounded-full blur-2xl animate-pulse" />
+      {/* Floating Elements */}
+      <div className="absolute top-1/4 left-10 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-float" />
+      <div className="absolute bottom-1/4 right-10 w-32 h-32 bg-primary-glow/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '3s' }} />
+      <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-primary/10 rounded-full blur-lg animate-float" style={{ animationDelay: '1.5s' }} />
     </section>
   );
 };
