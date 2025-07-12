@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 text-primary mb-6">
               <Terminal className="h-6 w-6" />
-              <span className="text-xl font-bold">~/alex-chen</span>
+              <span className="text-xl font-bold">Simelwe Ngcobo</span>
             </div>
             <p className="text-muted-foreground mb-8 max-w-md leading-relaxed">
               passionate full-stack developer crafting digital experiences that
