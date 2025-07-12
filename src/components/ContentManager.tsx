@@ -1,18 +1,15 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import {
   Dialog,
   DialogContent,
   DialogTrigger,
   DialogTitle,
 } from "@/components/ui/dialog";
-import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
-import { Upload, X, Plus, Trash2, Image, Video, Expand } from "lucide-react";
+import { Expand, Image, Video, Upload } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
 interface MediaItem {
   id: string;
@@ -25,15 +22,8 @@ interface MediaItem {
   duration: string | null;
 }
 
-const ContentManager = () => {
+const Projects = () => {
   const [mediaItems, setMediaItems] = useState<MediaItem[]>([]);
-  const [isUploading, setIsUploading] = useState(false);
-  const [showUploadForm, setShowUploadForm] = useState(false);
-  const [uploadData, setUploadData] = useState({
-    title: "",
-    description: "",
-    file: null as File | null,
-  });
   const { toast } = useToast();
 
   useEffect(() => {
@@ -49,96 +39,11 @@ const ContentManager = () => {
     if (error) {
       toast({
         title: "Error",
-        description: "Failed to fetch media items",
+        description: "Failed to fetch projects",
         variant: "destructive",
       });
     } else {
       setMediaItems(data || []);
-    }
-  };
-
-  const handleFileUpload = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!uploadData.file || !uploadData.title) return;
-
-    setIsUploading(true);
-
-    try {
-      // Upload file to storage
-      const fileExt = uploadData.file.name.split(".").pop();
-      const fileName = `${Date.now()}.${fileExt}`;
-      const filePath = `media/${fileName}`;
-
-      const { error: uploadError } = await supabase.storage
-        .from("videos")
-        .upload(filePath, uploadData.file);
-
-      if (uploadError) throw uploadError;
-
-      // Get public URL
-      const {
-        data: { publicUrl },
-      } = supabase.storage.from("videos").getPublicUrl(filePath);
-
-      // Save to database
-      const { error: dbError } = await supabase.from("videos").insert({
-        title: uploadData.title,
-        description: uploadData.description || null,
-        file_path: publicUrl,
-        file_size: uploadData.file.size,
-        thumbnail_url: uploadData.file.type.startsWith("image/")
-          ? publicUrl
-          : null,
-      });
-
-      if (dbError) throw dbError;
-
-      toast({
-        title: "Success",
-        description: "Media uploaded successfully!",
-      });
-
-      setUploadData({ title: "", description: "", file: null });
-      setShowUploadForm(false);
-      fetchMediaItems();
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to upload media",
-        variant: "destructive",
-      });
-    } finally {
-      setIsUploading(false);
-    }
-  };
-
-  const deleteMediaItem = async (id: string, filePath: string) => {
-    try {
-      // Extract file path from URL for storage deletion
-      const urlParts = filePath.split("/");
-      const fileName = urlParts[urlParts.length - 1];
-      const storageFilePath = `media/${fileName}`;
-
-      // Delete from storage
-      await supabase.storage.from("videos").remove([storageFilePath]);
-
-      // Delete from database
-      const { error } = await supabase.from("videos").delete().eq("id", id);
-
-      if (error) throw error;
-
-      toast({
-        title: "Success",
-        description: "Media deleted successfully!",
-      });
-
-      fetchMediaItems();
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to delete media",
-        variant: "destructive",
-      });
     }
   };
 
@@ -151,116 +56,20 @@ const ContentManager = () => {
   };
 
   return (
-    <section id="content-manager" className="py-24 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-24 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-              content manager
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-foreground">
+              projects
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Upload and manage your portfolio media - images and videos of your
-              work.
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+              A showcase of my creative work - from video ads to graphic designs
+              and web projects.
             </p>
           </div>
 
-          <div className="mb-12">
-            {!showUploadForm ? (
-              <Button
-                onClick={() => setShowUploadForm(true)}
-                variant="glow"
-                size="lg"
-                className="mx-auto block"
-              >
-                <Plus className="h-5 w-5 mr-2" />
-                Add New Media
-              </Button>
-            ) : (
-              <Card className="bg-gradient-card border border-border/50 rounded-3xl overflow-hidden max-w-2xl mx-auto">
-                <CardContent className="p-8">
-                  <div className="flex justify-between items-center mb-6">
-                    <h3 className="text-2xl font-bold text-foreground">
-                      Upload New Media
-                    </h3>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => setShowUploadForm(false)}
-                    >
-                      <X className="h-4 w-4" />
-                    </Button>
-                  </div>
-
-                  <form onSubmit={handleFileUpload} className="space-y-6">
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Title *
-                      </label>
-                      <Input
-                        value={uploadData.title}
-                        onChange={(e) =>
-                          setUploadData({
-                            ...uploadData,
-                            title: e.target.value,
-                          })
-                        }
-                        placeholder="Enter media title"
-                        required
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Description
-                      </label>
-                      <Textarea
-                        value={uploadData.description}
-                        onChange={(e) =>
-                          setUploadData({
-                            ...uploadData,
-                            description: e.target.value,
-                          })
-                        }
-                        placeholder="Enter description (optional)"
-                        rows={3}
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        File *
-                      </label>
-                      <Input
-                        type="file"
-                        accept="image/*,video/*"
-                        onChange={(e) =>
-                          setUploadData({
-                            ...uploadData,
-                            file: e.target.files?.[0] || null,
-                          })
-                        }
-                        required
-                      />
-                    </div>
-
-                    <div className="flex space-x-4">
-                      <Button
-                        type="submit"
-                        disabled={isUploading}
-                        variant="glow"
-                        className="flex-1"
-                      >
-                        <Upload className="h-4 w-4 mr-2" />
-                        {isUploading ? "Uploading..." : "Upload Media"}
-                      </Button>
-                    </div>
-                  </form>
-                </CardContent>
-              </Card>
-            )}
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {mediaItems.map((item) => (
               <Card
                 key={item.id}
@@ -342,15 +151,6 @@ const ContentManager = () => {
                       <Upload className="h-12 w-12 text-muted-foreground" />
                     </div>
                   )}
-
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => deleteMediaItem(item.id, item.file_path)}
-                    className="absolute top-4 right-4 bg-black/50 hover:bg-red-500/80 text-white opacity-0 group-hover:opacity-100 transition-opacity z-10"
-                  >
-                    <Trash2 className="h-4 w-4" />
-                  </Button>
                 </div>
 
                 <CardContent className="p-6">
@@ -379,20 +179,11 @@ const ContentManager = () => {
             <div className="text-center py-16">
               <Upload className="h-24 w-24 text-muted-foreground mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                No media yet
+                Projects coming soon
               </h3>
-              <p className="text-muted-foreground mb-8">
-                Start building your portfolio by uploading your first piece of
-                work.
+              <p className="text-muted-foreground">
+                Check back later to see my latest work and creative projects.
               </p>
-              <Button
-                onClick={() => setShowUploadForm(true)}
-                variant="glow"
-                size="lg"
-              >
-                <Plus className="h-5 w-5 mr-2" />
-                Upload Your First Media
-              </Button>
             </div>
           )}
         </div>
@@ -401,4 +192,4 @@ const ContentManager = () => {
   );
 };
 
-export default ContentManager;
+export default Projects;
