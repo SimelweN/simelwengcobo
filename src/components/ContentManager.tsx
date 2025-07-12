@@ -248,14 +248,14 @@ const ContentManager = () => {
                 key={item.id}
                 className="group bg-gradient-card border border-border/50 rounded-3xl overflow-hidden hover:shadow-glow transition-all duration-300"
               >
-                <div className="relative aspect-video bg-muted/50">
+                <div className="relative bg-muted/50 rounded-2xl overflow-hidden" style={{ aspectRatio: 'auto' }}>
                   {isImageFile(item.file_path) ? (
                     <>
                       <Image className="absolute top-4 left-4 h-6 w-6 text-white/80" />
                       <img 
                         src={item.file_path} 
                         alt={item.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-auto object-contain max-h-96"
                       />
                     </>
                   ) : isVideoFile(item.file_path) ? (
@@ -263,7 +263,7 @@ const ContentManager = () => {
                       <Video className="absolute top-4 left-4 h-6 w-6 text-white/80" />
                       <video 
                         src={item.file_path}
-                        className="w-full h-full object-cover"
+                        className="w-full h-auto object-contain max-h-96"
                         controls
                       />
                     </>

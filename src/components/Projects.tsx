@@ -65,6 +65,16 @@ const Projects = () => {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               A collection of projects that showcase my passion for creating exceptional digital experiences.
             </p>
+            <div className="mt-6">
+              <a 
+                href="https://rebookedsolutions.co.za" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium"
+              >
+                Visit ReBooked Solutions →
+              </a>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

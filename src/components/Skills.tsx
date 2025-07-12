@@ -40,7 +40,7 @@ const Skills = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-              tech stack
+              my toolkit
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Tools and technologies I use to craft exceptional digital experiences.
