@@ -1,11 +1,11 @@
-import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Projects from '@/components/Projects';
-import ContentManager from '@/components/ContentManager';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
-import Experience from '@/components/Experience';
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Services from "@/components/Projects";
+import Projects from "@/components/ContentManager";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import Experience from "@/components/Experience";
 
 const Index = () => {
   return (
@@ -14,8 +14,8 @@ const Index = () => {
       <Hero />
       <About />
       <Experience />
+      <Services />
       <Projects />
-      <ContentManager />
       <Contact />
       <Footer />
     </div>
