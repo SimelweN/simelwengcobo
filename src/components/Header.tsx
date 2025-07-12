@@ -34,7 +34,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2 text-primary">
             <Terminal className="h-6 w-6" />
-            <span className="text-xl font-bold">~/dev</span>
+            <span className="text-xl font-bold">Simelwe Ngcobo</span>
           </div>
 
           {/* Desktop Navigation */}
