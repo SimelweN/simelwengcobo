@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart, Terminal } from "lucide-react";
+import { Mail, Heart, Terminal } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,23 +19,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-2xl bg-card hover:bg-accent transition-all duration-300 hover:scale-110 shadow-card hover:shadow-glow"
-              >
-                <Github className="h-5 w-5 text-foreground hover:text-primary transition-colors" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-2xl bg-card hover:bg-accent transition-all duration-300 hover:scale-110 shadow-card hover:shadow-glow"
-              >
-                <Linkedin className="h-5 w-5 text-foreground hover:text-primary transition-colors" />
-              </a>
-              <a
-                href="mailto:alex@chen.dev"
+                href="mailto:simelwengcobo@outlook.co.za"
                 className="p-3 rounded-2xl bg-card hover:bg-accent transition-all duration-300 hover:scale-110 shadow-card hover:shadow-glow"
               >
                 <Mail className="h-5 w-5 text-foreground hover:text-primary transition-colors" />
