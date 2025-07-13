@@ -1,39 +1,7 @@
-import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const { toast } = useToast();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "message sent! 🚀",
-      description:
-        "thanks for reaching out. i'll get back to you within 24 hours.",
-    });
-    setFormData({ name: "", email: "", subject: "", message: "" });
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   return (
     <section id="contact" className="py-24">
       <div className="container mx-auto px-4 sm:px-6">
@@ -49,15 +17,15 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-12">
+          <div className="max-w-4xl mx-auto">
             {/* Contact Information */}
-            <div className="lg:col-span-2 space-y-8">
+            <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold mb-8 text-foreground">
                   get in touch
                 </h3>
 
-                <div className="space-y-6">
+                <div className="grid md:grid-cols-3 gap-6">
                   <Card className="group p-6 bg-gradient-card border-0 shadow-card hover:shadow-glow transition-all duration-300 rounded-3xl">
                     <CardContent className="p-0">
                       <div className="flex items-center space-x-4">
@@ -133,89 +101,6 @@ const Contact = () => {
                       websites
                     </span>
                   </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Contact Form */}
-            <div className="lg:col-span-3">
-              <Card className="p-8 bg-gradient-card border-0 shadow-card rounded-3xl">
-                <CardContent className="p-0">
-                  <h3 className="text-2xl font-bold mb-8 text-foreground">
-                    contact form
-                  </h3>
-
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-sm font-medium text-foreground mb-3">
-                          name *
-                        </label>
-                        <Input
-                          type="text"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          required
-                          className="w-full bg-secondary/50 border-border rounded-2xl h-12"
-                          placeholder="your name"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-foreground mb-3">
-                          email *
-                        </label>
-                        <Input
-                          type="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                          className="w-full bg-secondary/50 border-border rounded-2xl h-12"
-                          placeholder="your@email.com"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-3">
-                        subject
-                      </label>
-                      <Input
-                        type="text"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        className="w-full bg-secondary/50 border-border rounded-2xl h-12"
-                        placeholder="what's this about?"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-3">
-                        message *
-                      </label>
-                      <Textarea
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                        rows={6}
-                        className="w-full resize-none bg-secondary/50 border-border rounded-2xl"
-                        placeholder="tell me about your project, ideas, or just say hello..."
-                      />
-                    </div>
-
-                    <Button
-                      type="submit"
-                      variant="glow"
-                      size="lg"
-                      className="w-full md:w-auto"
-                    >
-                      <Send className="h-5 w-5 mr-2" />
-                      submit
-                    </Button>
-                  </form>
                 </CardContent>
               </Card>
             </div>
