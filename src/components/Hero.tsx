@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail, Code, Coffee } from "lucide-react";
+import { ArrowDown, Mail, Code, Coffee } from "lucide-react";
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
@@ -99,32 +99,8 @@ const Hero = () => {
           {/* Social Links - Floating */}
           <div className="flex justify-center space-x-6 mb-16">
             <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:simelwengcobo@outlook.co.za"
               className="group relative p-4 rounded-2xl bg-card hover:bg-accent transition-all duration-300 hover:scale-110 shadow-card hover:shadow-glow animate-float"
-            >
-              <Github className="h-6 w-6 text-foreground group-hover:text-primary transition-colors" />
-              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">
-                GitHub
-              </div>
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative p-4 rounded-2xl bg-card hover:bg-accent transition-all duration-300 hover:scale-110 shadow-card hover:shadow-glow animate-float"
-              style={{ animationDelay: "1s" }}
-            >
-              <Linkedin className="h-6 w-6 text-foreground group-hover:text-primary transition-colors" />
-              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">
-                LinkedIn
-              </div>
-            </a>
-            <a
-              href="mailto:simelwe@rebookedsolutions.co.za"
-              className="group relative p-4 rounded-2xl bg-card hover:bg-accent transition-all duration-300 hover:scale-110 shadow-card hover:shadow-glow animate-float"
-              style={{ animationDelay: "2s" }}
             >
               <Mail className="h-6 w-6 text-foreground group-hover:text-primary transition-colors" />
               <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">
