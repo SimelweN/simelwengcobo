@@ -17,13 +17,22 @@ const Footer = () => {
               passionate full-stack developer crafting digital experiences that
               blend creativity with cutting-edge technology.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex flex-col space-y-3">
               <a
                 href="mailto:simelwengcobo@outlook.co.za"
-                className="p-3 rounded-2xl bg-card hover:bg-accent transition-all duration-300 hover:scale-110 shadow-card hover:shadow-glow"
+                className="inline-flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors text-sm break-all"
               >
-                <Mail className="h-5 w-5 text-foreground hover:text-primary transition-colors" />
+                <Mail className="h-4 w-4 flex-shrink-0" />
+                <span className="break-all">simelwengcobo@outlook.co.za</span>
               </a>
+              <div className="flex space-x-4">
+                <a
+                  href="mailto:simelwengcobo@outlook.co.za"
+                  className="p-3 rounded-2xl bg-card hover:bg-accent transition-all duration-300 hover:scale-110 shadow-card hover:shadow-glow"
+                >
+                  <Mail className="h-5 w-5 text-foreground hover:text-primary transition-colors" />
+                </a>
+              </div>
             </div>
           </div>
 

@@ -8,9 +8,6 @@ const Experience = () => {
       category: "High School Excellence",
       icon: GraduationCap,
       items: [
-        "Top 10% Academic Performance",
-        "Computer Science Award Winner",
-        "Mathematics Excellence Certificate",
         "Junior and Senior Prefect",
         "Aqua Chief Captain & Ambassador",
         "Major Production Captain",
