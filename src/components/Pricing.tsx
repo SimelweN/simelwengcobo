@@ -25,11 +25,11 @@ const Pricing = () => {
   ];
 
   const websiteServices = [
-    { service: "1-Page Site (Landing Page)", price: "R600 – R1000" },
-    { service: "Basic Website (3 Pages)", price: "R1200 – R2000" },
-    { service: "Extra Pages", price: "+R300 – R500 each" },
-    { service: "Contact Form / Map Integration", price: "+R200 – R400" },
-    { service: "Animations / Scroll Effects", price: "+R200 – R400" },
+    { service: "1-Page Site (Landing Page)", price: "R400 – R800" },
+    { service: "Basic Website (3 Pages)", price: "R900 – R1500" },
+    { service: "Extra Pages", price: "+R200 – R350 each" },
+    { service: "Contact Form / Map Integration", price: "+R150 – R300" },
+    { service: "Animations / Scroll Effects", price: "+R150 – R300" },
   ];
 
   const videoServices = [
