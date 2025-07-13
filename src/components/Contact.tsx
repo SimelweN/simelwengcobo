@@ -3,14 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Mail,
-  MapPin,
-  Phone,
-  Send,
-  MessageSquare,
-  Calendar,
-} from "lucide-react";
+import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -142,26 +135,6 @@ const Contact = () => {
                   </div>
                 </CardContent>
               </Card>
-
-              {/* Quick Actions */}
-              <div className="space-y-3">
-                <Button
-                  variant="minimal"
-                  className="w-full justify-start"
-                  size="lg"
-                >
-                  <MessageSquare className="h-5 w-5 mr-3" />
-                  schedule a call
-                </Button>
-                <Button
-                  variant="minimal"
-                  className="w-full justify-start"
-                  size="lg"
-                >
-                  <Calendar className="h-5 w-5 mr-3" />
-                  book consultation
-                </Button>
-              </div>
             </div>
 
             {/* Contact Form */}
@@ -169,7 +142,7 @@ const Contact = () => {
               <Card className="p-8 bg-gradient-card border-0 shadow-card rounded-3xl">
                 <CardContent className="p-0">
                   <h3 className="text-2xl font-bold mb-8 text-foreground">
-                    send me a message
+                    contact form
                   </h3>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -240,7 +213,7 @@ const Contact = () => {
                       className="w-full md:w-auto"
                     >
                       <Send className="h-5 w-5 mr-2" />
-                      send message
+                      submit
                     </Button>
                   </form>
                 </CardContent>
