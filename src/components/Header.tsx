@@ -68,6 +68,13 @@ const Header = () => {
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
             </button>
             <button
+              onClick={() => scrollToSection("pricing")}
+              className="text-muted-foreground hover:text-primary transition-colors relative group"
+            >
+              <span>pricing</span>
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+            </button>
+            <button
               onClick={() => scrollToSection("contact")}
               className="text-muted-foreground hover:text-primary transition-colors relative group"
             >
