@@ -130,6 +130,12 @@ const Header = () => {
                 projects
               </button>
               <button
+                onClick={() => scrollToSection("pricing")}
+                className="text-left text-muted-foreground hover:text-primary transition-colors"
+              >
+                pricing
+              </button>
+              <button
                 onClick={() => scrollToSection("contact")}
                 className="text-left text-muted-foreground hover:text-primary transition-colors"
               >
