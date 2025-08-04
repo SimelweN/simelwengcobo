@@ -101,49 +101,108 @@ const Experience = () => {
             ))}
           </div>
 
-          {/* ReBooked Solutions Highlight */}
-          <Card className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-3xl overflow-hidden">
-            <CardContent className="p-12 text-center">
-              <Badge className="mb-6 bg-primary/20 text-primary border-primary/30">
-                Featured Project
+          {/* Featured Projects */}
+          <div className="space-y-8">
+            <div className="text-center mb-12">
+              <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
+                Featured Projects
               </Badge>
-              <h3 className="text-4xl font-bold mb-6 text-foreground">
-                ReBooked Solutions
-              </h3>
-              <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                A comprehensive platform helping South African students buy and
-                sell secondhand textbooks. Built from the ground up with React,
-                Supabase, and Paystack integration - demonstrating full-stack
-                development capabilities and business acumen.
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Get a sneak peek at my projects! ReBooked Solutions releases on Friday, and ReBooked News will be released at a later stage.
               </p>
-              <div className="flex flex-wrap justify-center gap-3 mb-8">
-                {[
-                  "React & TypeScript",
-                  "Supabase Backend",
-                  "Paystack Payments",
-                  "Email Automation",
-                  "Admin Dashboard",
-                  "Mobile Responsive",
-                ].map((tech) => (
-                  <Badge
-                    key={tech}
-                    variant="secondary"
-                    className="bg-accent/50"
+            </div>
+
+            {/* ReBooked Solutions */}
+            <Card className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-3xl overflow-hidden">
+              <CardContent className="p-12 text-center">
+                <h3 className="text-4xl font-bold mb-6 text-foreground">
+                  ReBooked Solutions
+                </h3>
+                <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+                  A comprehensive platform helping South African students buy and
+                  sell secondhand textbooks. Built from the ground up with React,
+                  Supabase, and Paystack integration - demonstrating full-stack
+                  development capabilities and business acumen.
+                </p>
+                <div className="flex flex-wrap justify-center gap-3 mb-8">
+                  {[
+                    "React & TypeScript",
+                    "Supabase Backend",
+                    "Paystack Payments",
+                    "Email Automation",
+                    "Admin Dashboard",
+                    "Mobile Responsive",
+                  ].map((tech) => (
+                    <Badge
+                      key={tech}
+                      variant="secondary"
+                      className="bg-accent/50"
+                    >
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+                  <a
+                    href="https://rebookedsolutions.co.za"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium text-lg"
                   >
-                    {tech}
+                    Visit ReBooked Solutions →
+                  </a>
+                  <Badge variant="outline" className="text-sm">
+                    Releasing Friday
                   </Badge>
-                ))}
-              </div>
-              <a
-                href="https://rebookedsolutions.co.za"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium text-lg"
-              >
-                Visit ReBooked Solutions →
-              </a>
-            </CardContent>
-          </Card>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* ReBooked News */}
+            <Card className="bg-gradient-to-r from-secondary/10 to-secondary/5 border border-secondary/20 rounded-3xl overflow-hidden">
+              <CardContent className="p-12 text-center">
+                <h3 className="text-4xl font-bold mb-6 text-foreground">
+                  ReBooked News
+                </h3>
+                <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+                  A modern news platform delivering the latest updates and stories.
+                  Built with cutting-edge web technologies for an exceptional user
+                  experience and seamless content delivery.
+                </p>
+                <div className="flex flex-wrap justify-center gap-3 mb-8">
+                  {[
+                    "Next.js",
+                    "Modern UI",
+                    "Content Management",
+                    "Responsive Design",
+                    "Fast Performance",
+                    "SEO Optimized",
+                  ].map((tech) => (
+                    <Badge
+                      key={tech}
+                      variant="secondary"
+                      className="bg-accent/50"
+                    >
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+                  <a
+                    href="https://rebooked-news.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium text-lg"
+                  >
+                    Preview ReBooked News →
+                  </a>
+                  <Badge variant="outline" className="text-sm">
+                    Coming Soon
+                  </Badge>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>
