@@ -122,6 +122,8 @@ const Projects = () => {
                               className="w-full h-auto object-contain max-h-96 pointer-events-none"
                               muted
                               loop
+                              autoPlay
+                              playsInline
                               preload="metadata"
                             />
                             <div className="absolute inset-0 bg-black/20 opacity-0 group-hover/expand:opacity-100 transition-opacity flex items-center justify-center">
