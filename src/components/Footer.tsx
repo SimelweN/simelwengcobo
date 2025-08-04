@@ -19,15 +19,15 @@ const Footer = () => {
             </p>
             <div className="flex flex-col space-y-3">
               <a
-                href="mailto:simelwengcobo@outlook.co.za"
+                href="mailto:simelwengcobo@icloud.com"
                 className="inline-flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors text-sm break-all"
               >
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <span className="break-all">simelwengcobo@outlook.co.za</span>
+                <span className="break-all">simelwengcobo@icloud.com</span>
               </a>
               <div className="flex space-x-4">
                 <a
-                  href="mailto:simelwengcobo@outlook.co.za"
+                  href="mailto:simelwengcobo@icloud.com"
                   className="p-3 rounded-2xl bg-card hover:bg-accent transition-all duration-300 hover:scale-110 shadow-card hover:shadow-glow"
                 >
                   <Mail className="h-5 w-5 text-foreground hover:text-primary transition-colors" />
@@ -89,7 +89,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm font-mono">
-            © {currentYear} alex chen. all rights reserved.
+            © {currentYear} simelwe ngcobo. all rights reserved.
           </p>
           <p className="text-muted-foreground text-sm flex items-center mt-4 md:mt-0">
             built with <Heart className="h-4 w-4 mx-1 text-primary" /> using
