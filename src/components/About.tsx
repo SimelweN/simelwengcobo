@@ -21,19 +21,10 @@ const About = () => {
                 Building the future, one line at a time
               </h3>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                I'm Simelwe Ngcobo, a 19-year-old entrepreneur and digital
-                creative from South Africa. I'm the Founder & CEO of ReBooked
-                Solutions, an innovative student platform, and I run a growing
-                freelance side hustle focused on helping local youth businesses
-                look clean, professional, and digital-ready.
+                I'm Simelwe Ngcobo, a young entrepreneur and digital creative from South Africa. Founder & CEO of ReBooked Solutions and freelance designer helping youth businesses go digital.
               </p>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                Although I'm no longer enrolled at Richfield Graduate Institute,
-                I studied BSc Information Technology, where I built a strong
-                foundation in web development, networks, cloud tech, and system
-                design. Since then, I've applied those skills in real-world
-                projects, building platforms, running campaigns, and producing
-                ad content that actually works.
+                Self-taught developer with BSc IT background. Building platforms and creating content that works.
               </p>
 
               <div className="grid grid-cols-2 gap-4 pt-6">
@@ -44,8 +35,8 @@ const About = () => {
                   </div>
                 </div>
                 <div className="text-center p-4 bg-card/50 rounded-2xl border border-border">
-                  <div className="text-2xl font-bold text-primary">19</div>
-                  <div className="text-sm text-muted-foreground">Years Old</div>
+                  <div className="text-2xl font-bold text-primary">🚀</div>
+                  <div className="text-sm text-muted-foreground">Young Founder</div>
                 </div>
                 <div className="text-center p-4 bg-card/50 rounded-2xl border border-border">
                   <div className="text-2xl font-bold text-primary">∞</div>
@@ -74,8 +65,7 @@ const About = () => {
                         ReBooked Solutions
                       </h4>
                       <p className="text-muted-foreground">
-                        Founder & CEO of a platform helping South African
-                        students buy and sell secondhand textbooks.
+                        Student textbook marketplace platform.
                       </p>
                     </div>
                   </div>
@@ -93,8 +83,7 @@ const About = () => {
                         Creative Services
                       </h4>
                       <p className="text-muted-foreground">
-                        Video ads, flyers, digital designs & websites for young
-                        businesses that want to look modern.
+                        Video ads, designs & websites for young businesses.
                       </p>
                     </div>
                   </div>
@@ -112,8 +101,7 @@ const About = () => {
                         Gen Z Marketing
                       </h4>
                       <p className="text-muted-foreground">
-                        Strong Gen Z marketing sense with fast turnaround and
-                        affordable pricing.
+                        Gen Z marketing with fast turnaround.
                       </p>
                     </div>
                   </div>
@@ -131,8 +119,7 @@ const About = () => {
                         Self-Taught & Adaptable
                       </h4>
                       <p className="text-muted-foreground">
-                        Self-taught, adaptable, and passionate about creating
-                        solutions that make a real difference.
+                        Self-taught and adaptable problem solver.
                       </p>
                     </div>
                   </div>
