@@ -44,7 +44,7 @@ const Experience = () => {
       category: "Business Impact",
       icon: Users,
       items: [
-        "Founded ReBooked Solutions at 19",
+        "Founded ReBooked Solutions",
         "Built Complete SaaS Platform",
         "Successful Freelance Business",
         "Youth Entrepreneurship Leader",
@@ -108,7 +108,7 @@ const Experience = () => {
                 Featured Projects
               </Badge>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Get a sneak peek at my projects! ReBooked Solutions releases on Friday, and ReBooked News will be released at a later stage.
+                My featured projects and platforms.
               </p>
             </div>
 
@@ -119,11 +119,19 @@ const Experience = () => {
                   ReBooked Solutions
                 </h3>
                 <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                  A comprehensive platform helping South African students buy and
-                  sell secondhand textbooks. Built from the ground up with React,
-                  Supabase, and Paystack integration - demonstrating full-stack
-                  development capabilities and business acumen.
+                  Student textbook marketplace. I also operate the social media for ReBooked Solutions.
                 </p>
+                <div className="flex justify-center gap-4 mb-6">
+                  <a href="https://www.instagram.com/rebooked.solutions?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">
+                    Instagram
+                  </a>
+                  <a href="https://www.facebook.com/people/Rebooked-Solutions/61577195802238/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">
+                    Facebook
+                  </a>
+                  <a href="https://www.tiktok.com/@rebooked.solution" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">
+                    TikTok
+                  </a>
+                </div>
                 <div className="flex flex-wrap justify-center gap-3 mb-8">
                   {[
                     "React & TypeScript",
@@ -151,9 +159,6 @@ const Experience = () => {
                   >
                     Visit ReBooked Solutions →
                   </a>
-                  <Badge variant="outline" className="text-sm">
-                    Releasing Friday
-                  </Badge>
                 </div>
               </CardContent>
             </Card>
@@ -165,9 +170,7 @@ const Experience = () => {
                   ReBooked News
                 </h3>
                 <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                  A modern news platform delivering the latest updates and stories.
-                  Built with cutting-edge web technologies for an exceptional user
-                  experience and seamless content delivery.
+                  Modern news platform for latest updates.
                 </p>
                 <div className="flex flex-wrap justify-center gap-3 mb-8">
                   {[
@@ -196,9 +199,6 @@ const Experience = () => {
                   >
                     Preview ReBooked News →
                   </a>
-                  <Badge variant="outline" className="text-sm">
-                    Coming Soon
-                  </Badge>
                 </div>
               </CardContent>
             </Card>
