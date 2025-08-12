@@ -79,7 +79,7 @@ const Hero = () => {
             <Button
               variant="glow"
               size="lg"
-              onClick={() => scrollToSection("projects")}
+              onClick={() => scrollToSection("experience")}
               className="text-lg px-8 py-6"
             >
               <Code className="mr-2 h-5 w-5" />
