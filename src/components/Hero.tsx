@@ -69,7 +69,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in">
-            📍 South Africa | 19-year-old entrepreneur building digital
+            📍 South Africa | Young entrepreneur building digital
             solutions that help local youth businesses look clean, professional,
             and digital-ready.
           </p>
