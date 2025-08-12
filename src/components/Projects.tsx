@@ -7,7 +7,7 @@ const Services = () => {
     {
       title: "Basic Video Ads Production",
       description:
-        "Short promo videos (30 sec to 1 min) for social media with simple editing and text overlays using tools like Canva, InShot, or basic Premiere Pro skills.",
+        "Short promo videos (30 sec to 1 min) for social media with simple editing and text overlays using Canva, InShot, or Premiere Pro.",
       icon: Play,
       features: [
         "30 sec to 1 min videos",
