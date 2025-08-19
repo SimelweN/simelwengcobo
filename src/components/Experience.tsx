@@ -210,7 +210,7 @@ const Experience = () => {
                   MyFuze
                 </h3>
                 <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                  Water company operational for more than 5 years. Complete business solution with payment processing and customer management.
+                  Water company operational for more than 5 years. Complete business solution with payment processing and customer management. Website currently under construction.
                 </p>
                 <div className="flex flex-wrap justify-center gap-3 mb-8">
                   {[
