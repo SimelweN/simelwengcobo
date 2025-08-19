@@ -67,9 +67,6 @@ const Projects = () => {
               A showcase of my creative work - from video ads to graphic designs
               and web projects.
             </p>
-            <div className="flex justify-center mt-8">
-              <MediaUpload onUploadComplete={fetchMediaItems} />
-            </div>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
