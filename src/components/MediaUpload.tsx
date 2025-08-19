@@ -104,6 +104,10 @@ const MediaUpload = ({ onUploadComplete }: MediaUploadProps) => {
           .upload(filePath, file);
 
         if (uploadError) {
+          // If bucket doesn't exist, provide helpful error message
+          if (uploadError.message.includes('bucket') || uploadError.message.includes('not found')) {
+            throw new Error('Storage bucket not found. Please connect to Supabase and create a "media" bucket first.');
+          }
           throw uploadError;
         }
 
