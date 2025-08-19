@@ -197,7 +197,47 @@ const Experience = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium text-lg"
                   >
-                    Preview ReBooked News →
+                    Visit ReBooked News →
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* MyFuze */}
+            <Card className="bg-gradient-to-r from-blue-500/10 to-cyan-500/5 border border-blue-500/20 rounded-3xl overflow-hidden">
+              <CardContent className="p-12 text-center">
+                <h3 className="text-4xl font-bold mb-6 text-foreground">
+                  MyFuze
+                </h3>
+                <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+                  Water company operational for more than 5 years. Complete business solution with payment processing and customer management.
+                </p>
+                <div className="flex flex-wrap justify-center gap-3 mb-8">
+                  {[
+                    "React & TypeScript",
+                    "Paystack Integration",
+                    "Customer Portal",
+                    "Payment Processing",
+                    "Order Management",
+                    "Mobile Responsive",
+                  ].map((tech) => (
+                    <Badge
+                      key={tech}
+                      variant="secondary"
+                      className="bg-accent/50"
+                    >
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+                  <a
+                    href="https://myfuze.co.za"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium text-lg"
+                  >
+                    Visit MyFuze →
                   </a>
                 </div>
               </CardContent>
