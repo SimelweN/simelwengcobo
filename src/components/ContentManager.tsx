@@ -9,7 +9,6 @@ import {
 import { Expand, Image, Video, Upload } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
-import MediaUpload from "./MediaUpload";
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
 interface MediaItem {
