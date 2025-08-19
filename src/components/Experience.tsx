@@ -210,7 +210,7 @@ const Experience = () => {
                   MyFuze
                 </h3>
                 <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                  Water company operational for more than 5 years. Complete business solution with payment processing and customer management. Website currently under construction.
+                  Water company operational for more than 5 years. Complete business solution with payment processing and customer management.
                 </p>
                 <div className="flex flex-wrap justify-center gap-3 mb-8">
                   {[
@@ -230,7 +230,7 @@ const Experience = () => {
                     </Badge>
                   ))}
                 </div>
-                <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <div className="flex flex-col justify-center items-center gap-2">
                   <a
                     href="https://myfuze.co.za"
                     target="_blank"
@@ -239,6 +239,9 @@ const Experience = () => {
                   >
                     Visit MyFuze →
                   </a>
+                  <p className="text-sm text-muted-foreground">
+                    Website currently under construction
+                  </p>
                 </div>
               </CardContent>
             </Card>
