@@ -192,7 +192,7 @@ const Experience = () => {
                 </div>
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
                   <a
-                    href="https://rebooked-news.vercel.app/"
+                    href="https://news.rebookedsolutions.co.za"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium text-lg"
