@@ -6,9 +6,10 @@ import {
   DialogTrigger,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Expand, Image, Video, Upload } from "lucide-react";
+import { Expand, Image, Video, Upload, Plus, FolderPlus } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
 interface MediaItem {
@@ -67,6 +68,38 @@ const Projects = () => {
               A showcase of my creative work - from video ads to graphic designs
               and web projects.
             </p>
+            <div className="flex justify-center gap-4 mt-8">
+              <Button
+                variant="outline"
+                size="lg"
+                className="bg-primary/10 border-primary/30 hover:bg-primary/20 text-primary hover:text-primary"
+                onClick={() => {
+                  // You can implement file upload functionality here
+                  toast({
+                    title: "Add Projects",
+                    description: "Upload functionality coming soon! You can add videos and photos through your admin panel.",
+                  });
+                }}
+              >
+                <Plus className="h-5 w-5 mr-2" />
+                Add Videos & Photos
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="bg-secondary/10 border-secondary/30 hover:bg-secondary/20 text-secondary-foreground hover:text-secondary-foreground"
+                onClick={() => {
+                  // You can implement project management here
+                  toast({
+                    title: "Manage Projects",
+                    description: "Project management panel coming soon!",
+                  });
+                }}
+              >
+                <FolderPlus className="h-5 w-5 mr-2" />
+                Manage Projects
+              </Button>
+            </div>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
