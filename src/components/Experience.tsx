@@ -108,7 +108,7 @@ const Experience = () => {
                 Featured Projects
               </Badge>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                My featured projects and platforms that I built myself from scratch.
+                My featured projects and platforms — designed, developed, and built from scratch.
               </p>
             </div>
 
