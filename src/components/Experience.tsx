@@ -104,11 +104,11 @@ const Experience = () => {
           {/* Featured Projects */}
           <div className="space-y-8">
             <div className="text-center mb-12">
-              <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
+              <Badge className="mb-4 bg-primary/20 text-primary border-primary/30 text-lg px-6 py-2">
                 Featured Projects
               </Badge>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                My featured projects and platforms.
+                My featured projects and platforms — designed, developed, and built from scratch.
               </p>
             </div>
 
@@ -232,7 +232,7 @@ const Experience = () => {
                 </div>
                 <div className="flex flex-col justify-center items-center gap-2">
                   <a
-                    href="https://myfuze.co.za"
+                    href="https://myfuze.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium text-lg"
