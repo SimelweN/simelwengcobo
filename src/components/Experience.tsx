@@ -104,11 +104,11 @@ const Experience = () => {
           {/* Featured Projects */}
           <div className="space-y-8">
             <div className="text-center mb-12">
-              <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">
+              <Badge className="mb-4 bg-primary/20 text-primary border-primary/30 text-lg px-6 py-2">
                 Featured Projects
               </Badge>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                My featured projects and platforms.
+                My featured projects and platforms that I built myself from scratch.
               </p>
             </div>
 
