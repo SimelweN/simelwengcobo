@@ -6,7 +6,7 @@ import {
   DialogTrigger,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Expand, Image, Video, Upload } from "lucide-react";
+import { Expand, Image, Video } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
