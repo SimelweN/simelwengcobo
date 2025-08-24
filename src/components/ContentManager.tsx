@@ -172,17 +172,6 @@ const Projects = () => {
             ))}
           </div>
 
-          {mediaItems.length === 0 && (
-            <div className="text-center py-16">
-              <Upload className="h-24 w-24 text-muted-foreground mx-auto mb-6" />
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                Projects coming soon
-              </h3>
-              <p className="text-muted-foreground">
-                Most of my projects are showcased on ReBooked Solutions Instagram and Facebook pages.
-              </p>
-            </div>
-          )}
         </div>
       </div>
     </section>
