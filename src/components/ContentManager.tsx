@@ -58,8 +58,9 @@ const Projects = () => {
               projects
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-              A showcase of my creative work - from video ads to graphic designs
-              and web projects.
+              Most of my projects are displayed on ReBooked Solutions Instagram page.
+              All projects there are made by me. Follow us on Instagram and Facebook
+              to see my latest creative work.
             </p>
           </div>
 
@@ -178,7 +179,7 @@ const Projects = () => {
                 Projects coming soon
               </h3>
               <p className="text-muted-foreground">
-                Check back later to see my latest work and creative projects.
+                Most of my projects are showcased on ReBooked Solutions Instagram and Facebook pages.
               </p>
             </div>
           )}
