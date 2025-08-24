@@ -36,14 +36,13 @@ const MediaUpload = ({ onUploadComplete }: MediaUploadProps) => {
     const selectedFiles = Array.from(event.target.files || []);
     const validFiles = selectedFiles.filter(file => {
       const isImage = file.type.startsWith('image/');
-      const isVideo = file.type.startsWith('video/');
-      return isImage || isVideo;
+      return isImage;
     });
 
     if (validFiles.length !== selectedFiles.length) {
       toast({
         title: "Invalid files",
-        description: "Only image and video files are allowed",
+        description: "Only image files are allowed",
         variant: "destructive",
       });
     }
@@ -157,7 +156,6 @@ const MediaUpload = ({ onUploadComplete }: MediaUploadProps) => {
   };
 
   const isImageFile = (file: File) => file.type.startsWith('image/');
-  const isVideoFile = (file: File) => file.type.startsWith('video/');
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
@@ -167,12 +165,12 @@ const MediaUpload = ({ onUploadComplete }: MediaUploadProps) => {
           className="bg-primary hover:bg-primary/90 text-primary-foreground"
         >
           <Plus className="h-5 w-5 mr-2" />
-          Add Photos & Videos
+          Add Photos
         </Button>
       </DialogTrigger>
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>Upload Photos & Videos</DialogTitle>
+          <DialogTitle>Upload Photos</DialogTitle>
         </DialogHeader>
         
         <div className="space-y-6">
@@ -186,17 +184,17 @@ const MediaUpload = ({ onUploadComplete }: MediaUploadProps) => {
               <Upload className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
               <p className="text-lg font-medium mb-2">Choose files to upload</p>
               <p className="text-muted-foreground">
-                Drag and drop or click to select photos and videos
+                Drag and drop or click to select photos
               </p>
               <p className="text-sm text-muted-foreground mt-2">
-                Supported formats: JPG, PNG, GIF, MP4, WebM, MOV
+                Supported formats: JPG, PNG, GIF
               </p>
             </div>
             <Input
               ref={fileInputRef}
               type="file"
               multiple
-              accept="image/*,video/*"
+              accept="image/*"
               onChange={handleFileSelect}
               className="hidden"
             />
@@ -211,7 +209,7 @@ const MediaUpload = ({ onUploadComplete }: MediaUploadProps) => {
                   <Card key={index} className="relative group">
                     <CardContent className="p-2">
                       <div className="aspect-square bg-muted rounded-lg overflow-hidden relative">
-                        {isImageFile(file) ? (
+                        {isImageFile(file) && (
                           <>
                             <Image className="absolute top-2 left-2 h-4 w-4 text-white z-10" />
                             {file.preview && (
@@ -222,11 +220,7 @@ const MediaUpload = ({ onUploadComplete }: MediaUploadProps) => {
                               />
                             )}
                           </>
-                        ) : isVideoFile(file) ? (
-                          <div className="w-full h-full flex items-center justify-center">
-                            <Video className="h-8 w-8 text-muted-foreground" />
-                          </div>
-                        ) : null}
+                        )}
                         
                         <Button
                           size="sm"
