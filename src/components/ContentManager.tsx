@@ -36,13 +36,7 @@ const Projects = () => {
       .select("*")
       .order("created_at", { ascending: false });
 
-    if (error) {
-      toast({
-        title: "Error",
-        description: "Failed to fetch projects",
-        variant: "destructive",
-      });
-    } else {
+    if (!error) {
       setMediaItems(data || []);
     }
   };
