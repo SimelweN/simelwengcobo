@@ -6,7 +6,7 @@ import {
   DialogTrigger,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Expand, Image, Video, Upload } from "lucide-react";
+import { Expand, Image, Video } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
@@ -36,13 +36,7 @@ const Projects = () => {
       .select("*")
       .order("created_at", { ascending: false });
 
-    if (error) {
-      toast({
-        title: "Error",
-        description: "Failed to fetch projects",
-        variant: "destructive",
-      });
-    } else {
+    if (!error) {
       setMediaItems(data || []);
     }
   };
@@ -64,8 +58,9 @@ const Projects = () => {
               projects
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-              A showcase of my creative work - from video ads to graphic designs
-              and web projects.
+              Most of my projects are displayed on ReBooked Solutions Instagram page.
+              All projects there are made by me. Follow us on Instagram and Facebook
+              to see my latest creative work.
             </p>
           </div>
 
@@ -177,17 +172,6 @@ const Projects = () => {
             ))}
           </div>
 
-          {mediaItems.length === 0 && (
-            <div className="text-center py-16">
-              <Upload className="h-24 w-24 text-muted-foreground mx-auto mb-6" />
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                Projects coming soon
-              </h3>
-              <p className="text-muted-foreground">
-                Check back later to see my latest work and creative projects.
-              </p>
-            </div>
-          )}
         </div>
       </div>
     </section>
