@@ -232,7 +232,7 @@ const Experience = () => {
                 </div>
                 <div className="flex flex-col justify-center items-center gap-2">
                   <a
-                    href="https://myfuze.vercel.app/"
+                    href="https://myfuze.co.za/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium text-lg"
