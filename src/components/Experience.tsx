@@ -108,7 +108,7 @@ const Experience = () => {
                 Featured Projects
               </Badge>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                My featured projects and platforms — designed, developed, and built from scratch.
+                My featured projects and platforms — designed, developed, and built from scratch for actual businesses.
               </p>
             </div>
 
@@ -254,7 +254,7 @@ const Experience = () => {
                 Demo Sites
               </Badge>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                These demo sites are made for actual websites, but serve as a showcase to give you a grasp of my development style and capabilities.
+                These aren't actual websites, but serve as a showcase to give you a grasp of my development style and capabilities.
               </p>
             </div>
 
@@ -293,6 +293,49 @@ const Experience = () => {
                     className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium text-lg"
                   >
                     Visit Cakes&Candles →
+                  </a>
+                  <p className="text-sm text-muted-foreground">
+                    Demo website showcasing style & capabilities
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* MamaMia Pizza */}
+            <Card className="bg-gradient-to-r from-red-500/10 to-orange-500/5 border border-red-500/20 rounded-3xl overflow-hidden">
+              <CardContent className="p-12 text-center">
+                <h3 className="text-4xl font-bold mb-6 text-foreground">
+                  MamaMia Pizza
+                </h3>
+                <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+                  An authentic Italian pizza restaurant website demo featuring modern design, menu showcase, and ordering interface.
+                </p>
+                <div className="flex flex-wrap justify-center gap-3 mb-8">
+                  {[
+                    "React & TypeScript",
+                    "Modern UI/UX",
+                    "Menu Display",
+                    "Interactive Design",
+                    "Responsive Layout",
+                    "Food Photography",
+                  ].map((tech) => (
+                    <Badge
+                      key={tech}
+                      variant="secondary"
+                      className="bg-accent/50"
+                    >
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+                <div className="flex flex-col justify-center items-center gap-2">
+                  <a
+                    href="https://mamamia-three-alpha.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium text-lg"
+                  >
+                    Visit MamaMia Pizza →
                   </a>
                   <p className="text-sm text-muted-foreground">
                     Demo website showcasing style & capabilities
