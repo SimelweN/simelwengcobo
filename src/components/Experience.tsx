@@ -246,6 +246,61 @@ const Experience = () => {
               </CardContent>
             </Card>
           </div>
+
+          {/* Demo Sites */}
+          <div className="space-y-8 mt-20">
+            <div className="text-center mb-12">
+              <Badge className="mb-4 bg-accent/20 text-accent-foreground border-accent/30 text-lg px-6 py-2">
+                Demo Sites
+              </Badge>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                These demo sites are made for actual websites, but serve as a showcase to give you a grasp of my development style and capabilities.
+              </p>
+            </div>
+
+            {/* Cakes&Candles */}
+            <Card className="bg-gradient-to-r from-pink-500/10 to-rose-500/5 border border-pink-500/20 rounded-3xl overflow-hidden">
+              <CardContent className="p-12 text-center">
+                <h3 className="text-4xl font-bold mb-6 text-foreground">
+                  Cakes&Candles
+                </h3>
+                <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+                  A beautiful bakery website demo showcasing modern design and user experience for a confectionery business.
+                </p>
+                <div className="flex flex-wrap justify-center gap-3 mb-8">
+                  {[
+                    "React & TypeScript",
+                    "Modern UI/UX",
+                    "Responsive Design",
+                    "Interactive Elements",
+                    "Beautiful Animations",
+                    "Mobile Optimized",
+                  ].map((tech) => (
+                    <Badge
+                      key={tech}
+                      variant="secondary"
+                      className="bg-accent/50"
+                    >
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+                <div className="flex flex-col justify-center items-center gap-2">
+                  <a
+                    href="https://cakesncandles.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium text-lg"
+                  >
+                    Visit Cakes&Candles →
+                  </a>
+                  <p className="text-sm text-muted-foreground">
+                    Demo website showcasing style & capabilities
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>
